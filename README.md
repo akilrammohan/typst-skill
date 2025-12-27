@@ -2,6 +2,11 @@
 
 A Claude Code skill for writing and creating Typst documents. Typst is a modern markup-based typesetting system and an alternative to LaTeX.
 
+> Note from the maintainer: I barely know how to write Typst, but use it to make my resume more convenient to manage. Using LLMs to write Typst probably goes against the spirit of many members of the community, but if you just want to write quickly compiling documents that are easily modifiable (with Claude), this skill is for you! Also Claude wrote this entire thing itself, so use with caution, although I have not had any issues with it having incorrect info or anything.
+
+## Important: 
+This skill auto-updates weekly via a local cron job on my machine, and auto commits and pushes without making a PR for human review. It is set up this way because I wouldn't even know how to review a PR for this skill if Claude made one, so I'm just trusting Claude to make proper updates. If you trust Claude less than I do (which is likely if you are a Typst enthusiast), please actually read the skill and verify its correctness. You will also need to run a cron job to regularly pull, or just pull manually when you want. We have an update script in this repo for this purpose. If you are better versed in the skills ecosystem than I am (or have just done 5 minutes of research to see if there is a better way to auto-update skills than whatever this is), make a PR! Or fork it so the project no longer has anything to do with me! I do not care!
+
 ## Features
 
 - Write Typst documents (.typ files) with proper syntax
@@ -31,6 +36,8 @@ git clone https://github.com/akilrammohan/typst-skill ~/.claude/skills/typst-ski
    ```
 
 3. Restart Claude Code to load the skill.
+
+4. Sanity check: ask Claude if it has a Typst skill.
 
 ## Usage
 
