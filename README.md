@@ -51,6 +51,27 @@ Example prompts:
 - `SKILL.md` - Main skill definition with essential Typst syntax
 - `references/math.md` - Comprehensive math mode reference
 - `references/advanced.md` - Advanced patterns, scripting, and templates
+- `CHANGELOG.md` - Record of skill updates
+
+## Staying Up to Date
+
+This skill is actively maintained via an automated process: the maintainer runs a weekly cron job that uses Claude Code in headless mode to check the [Typst changelog](https://github.com/typst/typst/releases), review the documentation for new features or syntax changes, and update the skill files accordingly. All changes are logged in `CHANGELOG.md`.
+
+To keep your local copy current, set up a weekly cron job to pull updates:
+
+```bash
+# Edit your crontab
+crontab -e
+
+# Pull updates weekly on Sundays at 10 AM
+0 10 * * 0 ~/.claude/skills/typst-skill/scripts/pull-updates.sh >> /tmp/typst-skill-pull.log 2>&1
+```
+
+Or pull manually anytime:
+
+```bash
+~/.claude/skills/typst-skill/scripts/pull-updates.sh
+```
 
 ## Requirements
 
